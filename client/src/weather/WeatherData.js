@@ -26,7 +26,7 @@ function parseWeatherData(weather_data,forecast) {
 }
 
 export async function fetchCurrentWeatherData() {
-    const data = await (await fetch("http://localhost:3080/api/current_weather", {
+    const data = await (await fetch("https://weatherappbackend-q6ju.onrender.com/api/current_weather", {
         method: "get",
         headers: new Headers({
             "Content-Type": "application/json",
@@ -36,7 +36,7 @@ export async function fetchCurrentWeatherData() {
     return parseWeatherData(data);
 }
 export async function fetchForecastData() {
-    const data = await (await fetch("http://localhost:3080/api/forecast", {
+    const data = await (await fetch("https://weatherappbackend-q6ju.onrender.com/api/forecast", {
         method: "get",
         headers: new Headers({
             "Content-Type": "application/json",

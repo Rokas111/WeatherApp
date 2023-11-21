@@ -8,7 +8,7 @@ export const AuthContext = createContext();
 export function Auth({fail_redirect,success_redirect,children}) {
     const [auth,setAuth] = useState(); 
     useEffect(() => {
-        fetch(`http://localhost:3080/api/user`, {
+        fetch(`https://weatherappbackend-q6ju.onrender.com/api/user`, {
             method: "GET",
             headers: new Headers({
                 Authorization: `Bearer ${Cookie.get("jwt_token")}`,
