@@ -14,7 +14,7 @@ function SignUpPage() {
     const submit = async (e) => {
         e.preventDefault();
         try {
-            const res = await (await fetch(`http://localhost:3080/api/signup`, {
+            const res = await (await fetch(`https://weatherappbackend-q6ju.onrender.com/api/signup`, {
                 method: "post",
                 body: JSON.stringify({
                     email: email,

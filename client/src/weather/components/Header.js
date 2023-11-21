@@ -16,7 +16,7 @@ function Header() {
     }
 
     const deleteUser = async () => {
-        const res = await fetch("http://localhost:3080/api/user", {
+        const res = await fetch("https://weatherappbackend-q6ju.onrender.com/api/user", {
             method: "delete",
             headers: new Headers({
                 "Content-Type": "application/json",
